@@ -1,5 +1,3 @@
-### Test
-##
-## test
+project for the dynamic language
 
-## test
+Developped by Antoine and Maxime
