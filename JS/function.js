@@ -1,3 +1,4 @@
+
 window.addEventListener("load", function () {
    var search = document.getElementById("search");
    var search_button = document.getElementById("search_button");
