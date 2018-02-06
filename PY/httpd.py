@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+    #!/usr/bin/env python3
 import socket
 import random
 import http.server
@@ -29,7 +29,7 @@ class HttpHandler(http.server.SimpleHTTPRequestHandler):
         #Les paramètres de même noms sont fusionnés:
         #?p=v1&p=v2  devient { 'p': [ 'v1', 'v2' ]
         parameters = urllib.parse.parse_qs(parsed_url.query)
-        print ("Resource :")
+        print ("Ressource :")
         print (parsed_url.path)
         print ("Paramètres :")
         print (parameters)
