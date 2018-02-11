@@ -22,6 +22,6 @@ var request = (url) => {
 };
 
 function search(val)  {
-    var req = request("http://localhost:9010/httpd.py?search=" + val);
+    var req = request("http://localhost:9010/index.html?search=" + val);
     var response = JSON.parse(req);
 };
