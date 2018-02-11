@@ -7,13 +7,12 @@ from pyspark.sql import SparkSession
 
 class TwitSearch():
 
-
+	self._sparkengine = None
 
 	def __init__(self):
 
 
-		spark = SparkSession.builder \
-		                        .appName(config.SPARK_APP_NAME) \
+		self._sparkengine = SparkSession.builder.appName(config.SPARK_APP_NAME) \
 		                        .config("spark.ui.showConsoleProgress","false") \
 		                        .master("local").getOrCreate()
 
