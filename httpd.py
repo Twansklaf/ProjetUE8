@@ -25,7 +25,7 @@ class HttpHandler(http.server.SimpleHTTPRequestHandler):
         #Parsing the l'URL
 
         parsed_url = urllib.parse.urlparse(self.path)
-        
+
         #Extraction des paramètres GET sous la forme d'un dictionnaire python
         #?p1=v1&p2=v2&...&pn=vn devient { 'p1' : ['v1'], …, 'pn':['vn'] }
         #Les paramètres de même noms sont fusionnés:
@@ -68,5 +68,7 @@ class ExtensibleHttpServer(socketserver.TCPServer):
 #Naviguer sur http://localhost:9010 après avoir lancé le serveur et observer la console
 
 if __name__ == "__main__":
+    PORT = 9010
     HTTPD = ExtensibleHttpServer(("localhost", 9010), HttpHandler)
+    print ("Serving at address : http://localhost:" + str(PORT))
     HTTPD.serve_until_interrupted()
