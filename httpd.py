@@ -70,5 +70,5 @@ class ExtensibleHttpServer(socketserver.TCPServer):
 if __name__ == "__main__":
     PORT = 9010
     HTTPD = ExtensibleHttpServer(("localhost", 9010), HttpHandler)
-    print ("Serving at address : http://localhost:" + str(PORT) + "/JS/")
+    print ("Serving at address : http://localhost:" + str(PORT))
     HTTPD.serve_until_interrupted()
