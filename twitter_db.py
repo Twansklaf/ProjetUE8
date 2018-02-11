@@ -17,6 +17,7 @@ class TwitSearch():
 		                        .master("local").getOrCreate()
 		spark.sparkContext.setLogLevel("ERROR")
 
+
 		
 
 #Creation d'une DATAFRAME (une « table ») à partir du fichier JSON se trouvant dans HDFS
