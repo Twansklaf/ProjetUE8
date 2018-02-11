@@ -4,9 +4,7 @@ from httpd import *
 
 if __name__ == "__main__":
 
-	
-    tw = TwitSearchNoSpark()
-    tw.load_json("Data/tweets.json")
+    # tw.load_json("Data/tweets.json")
 
     PORT = 9010
     HTTPD = ExtensibleHttpServer(("localhost", 9010), HttpHandler)
