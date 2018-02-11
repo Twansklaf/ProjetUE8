@@ -10,18 +10,14 @@ window.addEventListener("load", function () {
 		message_result.innerText = "recherche: " + search.value;
 		//on encode les données
 		var val =  encodeURIComponent(search.value);
-		search(val);
+		request(val);
     });
 });
 
 // fonction pour envoyer la chaine de caractere au serveur
-var request = (url) => {
+function request(search) {
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", url);
+    xhr.open("GET", "http://localhost:9010/index.html?search=" + search);
     xhr.send(null);
-};
 
-function search(val)  {
-    var req = request("http://localhost:9010/index.html?search=" + val);
-    var response = JSON.parse(req);
-};
+}
