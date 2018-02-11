@@ -23,16 +23,5 @@ var request = (url) => {
 
 function search(val)  {
     var req = request("http://localhost:9010/httpd.py?search=" + val);
-    res = JSON.parse(req);
-   	
-    while (true) {
-        var req = request("http://localhost:9010/result?job_id="+job_id)
-        var req = JSON.parse(req);
-        switch (req.status) {
-            case "success":
-                return req.results;
-            default:
-                await sleep(5000);          
-        }
-    }
+    var response = JSON.parse(req);
 };
