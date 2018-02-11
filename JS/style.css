@@ -7,14 +7,6 @@ body {
 	margin: 0;
 }
 
-footer {
-	position:absolute;
-	bottom:0;
-	width:100%;
-	padding-bottom: 10px;
-	text-align: center;
-}
-
 div {
 	margin: 25px;
 }
@@ -29,12 +21,6 @@ a {
 	text-decoration: none;
 	font-weight: bold;
 	margin-right: 10px; 
-}
-
-footer>a {
-	color: black;
-	font-weight: normal;
-	text-decoration: none;
 }
 
 a:hover {
