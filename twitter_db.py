@@ -34,17 +34,18 @@ class TwitSearchNoSpark():
 			l = f.readline()
 			while l != "" :
 				self._data.append(json.loads(l))
-				l = f.readline()	
+				l = f.readline()
+		print("Done loading tw database")
 
 #Creation d'une DATAFRAME (une « table ») à partir du fichier JSON se trouvant dans HDFS
 #Il faut remplacer le chemin par le fichier sous hdfs
 #on pourra le remplacer au début par un simple fichier local
 
-sp = TwitSearchNoSpark()
+# sp = TwitSearchNoSpark()
 
-sp.load_json("Data/tweets.json")
+# sp.load_json("Data/tweets.json")
 
-print("loadok")
+# print("loadok")
 
 # df = sp._sparkengine.read.json("hdfs://localhost:9010/Data/tweets.json")
 
