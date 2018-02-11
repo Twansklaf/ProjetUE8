@@ -6,14 +6,16 @@ window.addEventListener("load", function () {
 	
 	search_button.addEventListener("click", function () {
 		message_result.innerText = "recherche: " + search.value;
+		//on crypte les données
 		$val =  encodeURIComponent(search.value);
 		request(val);
     });
 });
 
+// fonction pour envoyer la chaine de caractere au serveur
 function request(search) {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "http://localhost:9010/twitter_db.py?search=" + search);
-    xhr.send(null); // La requête est prête, on envoie tout !
+    xhr.send(null);
 
 }
