@@ -5,11 +5,17 @@ from pyspark.sql import SparkSession
 
 #Creation d'une application spark
 
+class TwitSearch():
 
-spark = SparkSession.builder \
-                        .appName(config.SPARK_APP_NAME) \
-                        .config("spark.ui.showConsoleProgress","false") \
-                        .master("local").getOrCreate()
+
+
+	def __init__(self):
+
+
+		spark = SparkSession.builder \
+		                        .appName(config.SPARK_APP_NAME) \
+		                        .config("spark.ui.showConsoleProgress","false") \
+		                        .master("local").getOrCreate()
 
 spark.sparkContext.setLogLevel("ERROR")
 
@@ -17,7 +23,7 @@ spark.sparkContext.setLogLevel("ERROR")
 #Il faut remplacer le chemin par le fichier sous hdfs
 #on pourra le remplacer au début par un simple fichier local
 
-df = spark.read.json("hdfs://localhost:9000/input/twitter/20170129.json")
+df = spark.read.json("hdfs://localhost:9010/input/twitter/20170129.json")
 
 rdd = df.rdd
 

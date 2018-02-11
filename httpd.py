@@ -16,9 +16,6 @@ class HttpHandler(http.server.SimpleHTTPRequestHandler):
         self._session_id = None
         super().__init__(*args, **kwargs)
 
-
-
-
     def do_GET(self): # appelée par l'objet http.server dont on hérite
         """Méthode à surcharger pour répondre à une requête HTTP get"""
 
