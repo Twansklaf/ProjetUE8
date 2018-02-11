@@ -1,12 +1,14 @@
 
+//des que la page est chargée
 window.addEventListener("load", function () {
    var search = document.getElementById("search");
    var search_button = document.getElementById("search_button");
    var message_result = document.getElementById("message_result");
 	
+	//quand on clic sur le boutton
 	search_button.addEventListener("click", function () {
 		message_result.innerText = "recherche: " + search.value;
-		//on crypte les données
+		//on encode les données
 		$val =  encodeURIComponent(search.value);
 		request(val);
     });
