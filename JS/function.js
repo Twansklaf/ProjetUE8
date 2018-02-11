@@ -9,7 +9,7 @@ window.addEventListener("load", function () {
 	search_button.addEventListener("click", function () {
 		message_result.innerText = "recherche: " + search.value;
 		//on encode les données
-		$val =  encodeURIComponent(search.value);
+		var val =  encodeURIComponent(search.value);
 		request(val);
     });
 });
@@ -17,7 +17,7 @@ window.addEventListener("load", function () {
 // fonction pour envoyer la chaine de caractere au serveur
 function request(search) {
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://localhost:9010/search?=" + search);
+    xhr.open("GET", "http://localhost:9010/JS/index.html?search=" + search);
     xhr.send(null);
 
 }
