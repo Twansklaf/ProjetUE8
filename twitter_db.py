@@ -8,15 +8,16 @@ from pyspark.sql import SparkSession
 class TwitSearch():
 
 	self._sparkengine = None
+	self._dataframe = None
 
 	def __init__(self):
-
 
 		self._sparkengine = SparkSession.builder.appName(config.SPARK_APP_NAME) \
 		                        .config("spark.ui.showConsoleProgress","false") \
 		                        .master("local").getOrCreate()
+		spark.sparkContext.setLogLevel("ERROR")
 
-spark.sparkContext.setLogLevel("ERROR")
+		
 
 #Creation d'une DATAFRAME (une « table ») à partir du fichier JSON se trouvant dans HDFS
 #Il faut remplacer le chemin par le fichier sous hdfs
