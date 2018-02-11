@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 
-from pyspark.sql import SparkSession
+# from pyspark.sql import SparkSession
 import json
 
 SPARK_APP_NAME = "TwitSearch"
