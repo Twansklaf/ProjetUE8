@@ -4,6 +4,7 @@ import random
 import http.server
 import socketserver
 import urllib.parse
+import twitter_db
 
 
 class HttpHandler(http.server.SimpleHTTPRequestHandler):
@@ -33,6 +34,12 @@ class HttpHandler(http.server.SimpleHTTPRequestHandler):
         print ("Paramètres :")
         print (parameters)
 
+        if parameters != {}:
+            if list(parameters.keys())[0] == "search" :
+                t =TwitterSearchHandler()
+                t.search(parameters['search'])
+                print(t.return_data())
+
         #L'appel à la méthode parente SimpleHTTPRequestHandler qui va renvoyer le fichier
         #On n'est pas obligé de l'appeler.
         super().do_GET()
@@ -58,6 +65,23 @@ class ExtensibleHttpServer(socketserver.TCPServer):
             self.shutdown()
         finally:
             self.server_close()
+
+
+class TwitterSearchHandler():
+
+    def search(params):
+        self._tw = twitter_db.TwitSearchNoSpark()
+        self._tw.load_json("Data", params)
+
+    # def return_search():        
+
+    def test():
+        print("chose")
+
+    def return_data():
+        return self._tw
+
+
 
 
 #Exemple d'utilisation :

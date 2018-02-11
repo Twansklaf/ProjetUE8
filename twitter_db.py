@@ -56,12 +56,12 @@ class TwitSearchNoSpark():
 #Creation d'une DATAFRAME (une « table ») à partir du fichier JSON se trouvant dans HDFS
 #Il faut remplacer le chemin par le fichier sous hdfs
 #on pourra le remplacer au début par un simple fichier local
-
+'''
 sp = TwitSearchNoSpark()
 
 sp.load_json("Data/tweets.json", "sushi japonais")
 
-print(sp._data[0]['text'])
+print(sp._data[0]['text'])'''
 
 # for x in range(2000,2010):
 
