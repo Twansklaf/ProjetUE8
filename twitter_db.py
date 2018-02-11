@@ -24,10 +24,14 @@ class TwitSearch():
 
 class TwitSearchNoSpark():
 
+<<<<<<< HEAD
 	def __init__(self):
 		self._data = []
 
 	def load_json(self, path):
+=======
+
+>>>>>>> b2f829a507899662a6fcee80aee4246f0957cf87
 		
 		with open(path) as f:
 			l = f.readline()

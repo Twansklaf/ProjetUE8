@@ -39,7 +39,6 @@ class HttpHandler(http.server.SimpleHTTPRequestHandler):
 
 
 
-
 class ExtensibleHttpServer(socketserver.TCPServer):
     """Serveur HTTP qui étend celui donné par défaut. 2 Améilorations
        - on configure la socket pour pouvoir redémarrer immédiatement le serveur
