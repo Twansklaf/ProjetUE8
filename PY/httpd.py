@@ -23,7 +23,9 @@ class HttpHandler(http.server.SimpleHTTPRequestHandler):
         """Méthode à surcharger pour répondre à une requête HTTP get"""
 
         #Parsing the l'URL
+
         parsed_url = urllib.parse.urlparse(self.path)
+        print(parsed_url)
         #Extraction des paramètres GET sous la forme d'un dictionnaire python
         #?p1=v1&p2=v2&...&pn=vn devient { 'p1' : ['v1'], …, 'pn':['vn'] }
         #Les paramètres de même noms sont fusionnés:
